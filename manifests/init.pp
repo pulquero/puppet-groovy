@@ -54,12 +54,7 @@ class groovy (
     target     => '/opt',
     extension  => 'zip',
     timeout    => $timeout,
-  }
-
-  file { $target_real:
-    ensure  => link,
-    target  => "/opt/groovy-${version_real}",
-    require => Archive["groovy-binary-${version_real}.zip"],
+    root_dir   => "groovy-${version_real}",
   }
 
   file { '/etc/profile.d/groovy.sh':
