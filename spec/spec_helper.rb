@@ -1,17 +1,12 @@
-dir = File.expand_path(File.dirname(__FILE__))
-$LOAD_PATH.unshift File.join(dir, 'lib')
-
-require 'mocha'
-require 'puppet'
+require 'rubygems'
 require 'rspec'
-require 'spec/autorun'
+require 'puppetlabs_spec_helper/module_spec_helper'
 
-Spec::Runner.configure do |config|
-    config.mock_with :mocha
-end
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + '/../'))
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__) + '/../lib'))
 
-# We need this because the RAL uses 'should' as a method.  This
-# allows us the same behaviour but with a different method name.
-class Object
-    alias :must :should
+RSpec.configure do |c|
+  # Override puppetlabs_spec_helper's stupid setting of mock_with to :mocha,
+  # which is a totally piece of garbage mocking library
+  c.mock_with :rspec
 end

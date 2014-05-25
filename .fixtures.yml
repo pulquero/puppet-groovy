@@ -1,0 +1,12 @@
+fixtures:
+  forge_modules:
+    stdlib:
+      repo: 'puppetlabs/stdlib'
+      ref: '3.2.1'
+    staging:
+      repo: 'nanliu/staging'
+      ref: '0.4.0'
+
+
+  symlinks:
+    "groovy": "#{source_dir}"

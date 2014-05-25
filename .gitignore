@@ -1,1 +1,6 @@
 pkg/
+.ruby-*
+.vagrant_*
+*.swp
+
+spec/fixtures/
