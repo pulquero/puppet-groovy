@@ -4,3 +4,4 @@ pkg/
 *.swp
 
 spec/fixtures/
+.vagrant
