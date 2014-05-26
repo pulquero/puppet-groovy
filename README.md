@@ -3,20 +3,19 @@ Groovy Puppet Module
 
 This module will download and setup groovy from the official Codehaus' repository.
 
-It works for the following linux distributions:
-
-* Ubuntu
-* Fedory
-* Debian
 
 Usage
 -----
 
 ```puppet
-class {'groovy':
-  version => '2.1.3'
+class { 'groovy':
 }
+
 ```
+
+This will install Groovy 2.3.1 into `/opt/groovy-2,3,1` and install
+`/etc/profile.d/groovy.sh` to which will update the `PATH` and `GROOVY_HOME`
+appropriately for bash users.
 
 License
 -------
@@ -26,4 +25,4 @@ License
 Support
 -------
 
-Please log issues at our [Projects site](https://github.com/sherzberg/puppet-groovy/issues)
+Please log issues at our [Projects site](https://github.com/jenkins-infra/puppet-groovy/issues)
