@@ -1,4 +1,4 @@
-name    'puppet-groovy'
+name    'rtyler-groovy'
 version '1.0.0'
 source 'https://github.com/jenkins-infra/puppet-groovy'
 author 'R. Tyler Croy'
