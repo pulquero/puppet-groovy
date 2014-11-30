@@ -5,3 +5,5 @@ pkg/
 
 spec/fixtures/
 .vagrant
+
+.idea/
