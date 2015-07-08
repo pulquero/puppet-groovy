@@ -40,8 +40,10 @@ class groovy (
     ensure => present,
   }
 
-  file { $target:
-    ensure => directory,
+  if ! defined(File[$target]) {
+    file { $target:
+      ensure => directory,
+    }
   }
 
   staging::extract { $groovy_filename:
